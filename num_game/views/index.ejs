@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Great Number Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Welcome To The Great Number Game!</h1>
+        <h5>I am thinking of a number between 1 and 100</h5>
+        <h5>Take a guess!</h5>
+
+        <% if(guess == answer){%>
+            <h1> <%= answer %> was the number!</h1>
+            <button type=""><a href="/reset">Play Again?</a></button>
+        
+        <%} else {
+                if(guess > answer){ %>
+                <h1>Too High! Guess Again</h1>
+                <%} else{ %>
+                    <h1>Too Low! Guess Again</h1>
+                <%}%>
+
+                
+        <br>
+        <br>
+        <form action="/process" method="post">    
+            <input type="number" name="guess">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <%}%>
+
+
+    </body>
+</html>
